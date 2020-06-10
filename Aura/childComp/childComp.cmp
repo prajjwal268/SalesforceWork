@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="msg" type="String"></aura:attribute>
+    <lightning:button variant="brand" label="Click" onclick="{!c.changeMsg}"/>
+    <strong>I am Child msg below is from my parent</strong><br/>
+    <strong>{!v.msg}</strong>
+</aura:component>

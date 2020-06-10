@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="msg" type="String"/>
+    <aura:registerEvent name="ce" type="c:compEvent"/>
+    <div style="height:200px;width:200px;background:yellow;">
+        <span style="font-size:20px">Child Component</span><br/>
+        <lightning:input label="Enter Message" value="{!v.msg}"/>
+        <lightning:input label="Send Message" onclick="{!c.send}"/>
+    </div>
+</aura:component>

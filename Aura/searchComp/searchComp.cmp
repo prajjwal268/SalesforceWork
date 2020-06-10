@@ -1,0 +1,7 @@
+<aura:component >
+    <aura:registerEvent name="appEvent" type="c:appEvent"/>
+    <div class="slds-form slds-form--stacked">
+    	<lightning:input label="Search Contact" type="search" onkeyup="{!c.search}"
+                         aura:id="searchString"/>
+    </div>
+</aura:component>

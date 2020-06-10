@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:includeLightning />
+    Hello you are in VF..<br/><br/>
+    <div id="lightning"/><br/>
+    <div id="button"/><br/>
+    Hello end of Vf<br/><br/>
+    <script>
+    	$Lightning.use("c:lightningApp",function(){
+        	$Lightning.createComponent("c:owner",{ },"lightning",function(cmp){
+                console.log("button was created")})
+        });
+    $Lightning.use("c:lightningApp",function(){
+        	$Lightning.createComponent("lightning:button",{'label':'Click Me', 'variant':'brand' },'button',function(cmp){
+                console.log("button was created")})
+        });
+    </script>
+</apex:page>

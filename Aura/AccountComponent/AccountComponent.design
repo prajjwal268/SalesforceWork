@@ -1,0 +1,3 @@
+<design:component>
+	<design:attribute name="recordCount" label="Record Count" description="Please set number of records that you want to see"></design:attribute>
+</design:component>

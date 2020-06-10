@@ -1,0 +1,44 @@
+<aura:component controller="AccountController" implements="flexipage:availableForAllPageTypes" access="global">
+    
+	<aura:attribute name="accList" type="List"/>
+    <aura:attribute name="recordCount" type="Integer" default="5"/>
+    <aura:handler name="init" value="{!this}" action="{!c.callaccount}"/>
+    <div style="background:white;padding:20px;">
+        <lightning:button label="Display Accounts" variant="brand" onclick="{!c.navigateToMyComponent}"/><br/>
+        <table class="side-table slds-table--bordered"  >
+            <tbody>
+                <th>Name</th>
+        
+                <th>Annual Revenue</th>
+    <aura:iteration items="{!v.accList}" var="acc">
+        
+        <tr>
+        	<td>{!acc.Name}
+            	
+                    <table >
+                        
+                        
+                        <tbody>
+            
+                <aura:iteration items="{!acc.Contacts}" var="con">
+                    <lightning:card title="Contact Card" iconName="standard:contact">
+                    {!con.Name}
+                    </lightning:card>
+                </aura:iteration>
+                        </tbody>
+            
+                </table>
+                
+            </td>
+            
+        <td>{!acc.AnnualRevenue}</td>
+           
+            
+        </tr>
+       
+    	
+    </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

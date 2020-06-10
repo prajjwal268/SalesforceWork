@@ -1,0 +1,9 @@
+<aura:component >
+    <aura:attribute name="childMsg" type="String"/>
+    <aura:handler name="ce" event="c:compEvent" action="{!c.show}"/>
+    <div style="height:500px;width:500px;background:lime;">
+        <span style="font-szie:50px">Parent Component</span><br/>
+        <c:baseComp></c:baseComp><br/>
+       	<span style="font-size:50px;">{!v.childMsg}</span>
+    </div>
+</aura:component>

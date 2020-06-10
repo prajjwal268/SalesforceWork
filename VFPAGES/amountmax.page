@@ -1,0 +1,4 @@
+<apex:page standardController="Account" extensions="maxOpportunities">
+   Opportunity Name is  {!MaxOpp.Name}
+   Opportunity Amount is {!MaxOpp.Amount}
+</apex:page>

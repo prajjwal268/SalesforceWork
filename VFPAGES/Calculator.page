@@ -1,0 +1,26 @@
+<apex:page controller="Calculator" id="p1">
+    {!$Api.session_Id}
+    <apex:form id="f1">
+        <apex:messages />
+        <apex:inputText value="{!input1}" id="inp1"/>
+        <apex:commandButton value="+" action="{!add}" onclick="validate();"/>
+        <apex:inputText value="{!input2}" id="inp2"/>=
+        <apex:outputText >{!result}</apex:outputText>
+        <script>
+        function validate(){
+            var i1=parseInt(document.getElementById('p1:f1:inp1').value);
+            var i2=parseInt(document.getElementById('{!$Component.inp2}').value);
+            var i3;
+            if(i1==0&&i2==0)
+                {
+                    alert("enter values");
+                    }
+            else
+                {
+                    alert(i1+i2);
+                    }
+           
+        }
+        </script>
+    </apex:form>
+</apex:page>

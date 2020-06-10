@@ -1,0 +1,26 @@
+<apex:page standardController="Contact" recordSetVar="conts" extensions="DemoExtension">
+    <apex:form >
+    <apex:sectionHeader title="UPDATE CONTACTS"/>
+    <apex:pageBlock >
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!save}"/>
+            <apex:commandButton value="Cancel" action="{!cancel}"/>
+            <apex:commandButton value="DemoButton" action="{!demobutton}"/>
+            <input type="button" value="DemoButtonN" class="btn" />
+            </apex:pageBlockButtons>
+    	<apex:pageBlockSection columns="4">
+            <apex:inputField value="{!Contact.Phone}"/>
+            <apex:inputField value="{!Contact.AccountId}"/>
+            <apex:inputField value="{!Contact.Salutation}"/>
+       
+            <apex:pageBlockTable value="{!selected}" var="con">
+                <apex:column value="{!con.FirstName}" headerValue="FName" />
+                <apex:column value="{!con.LastName}"/>
+                <apex:column value="{!con.Phone}"/>
+                         
+            </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+        </apex:form>
+    <c:DemoVFComponent msg="Hey child, I hope you are doing good.." />
+</apex:page>

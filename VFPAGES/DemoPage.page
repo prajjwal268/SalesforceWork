@@ -1,0 +1,4 @@
+<apex:page standardController="Contact" recordSetVar="ContPage">
+    <h1>
+        <b> Hello World.Welcome to this city.</b></h1>
+</apex:page>

@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name="projName" type="String"/>
+    <aura:attribute name="locations" type="List"/>
+    Project Name is - {!v.projName}<br/><br/>
+    <aura:if isTrue="{!empty(v.locations)}">
+    	<strong>Locations are not yet assigned</strong>
+    <aura:set attribute="else">
+    Locations -
+    <aura:iteration items="{!v.locations}" var="loc">
+    	<li>{!loc}</li>
+    </aura:iteration>
+        </aura:set>
+    </aura:if>
+</aura:component>

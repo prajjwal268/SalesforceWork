@@ -1,0 +1,4 @@
+<apex:page standardController="Account">
+    Hello it's inline VF
+    account name is {!Account.Name}
+</apex:page>

@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="searchStr" type="String"/>
+    <aura:attribute name="isSearch" type="Boolean" default="false"/>
+</aura:event>

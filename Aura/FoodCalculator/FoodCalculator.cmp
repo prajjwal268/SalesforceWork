@@ -1,0 +1,27 @@
+<aura:component >
+	<aura:attribute name="ItemName" type="String" />
+    <aura:attribute name="ItemType" type="String" />
+    <aura:attribute name="Quantity" type="Integer" default="1"/>
+    
+    <aura:attribute name="Price" type="Double" />
+    <div style="background:white;border:10px solid red;">
+        Item Name= {!v.ItemName}<br/>
+        Item Type= {!v.ItemType}<br/>
+        Quantity={!v.Quantity}<br/>
+        <aura:if isTrue="{!v.ItemType=='Food'}">
+            Discount is {!v.Quantity*v.Price*0.15}<br/>
+          Price is {!v.Quantity*v.Price-(v.Quantity*v.Price*0.15)}
+            <aura:set attribute="else">
+                <aura:if isTrue="{!v.ItemType=='Drink'}">
+                 Discount is {!v.Quantity*v.Price*0.10}<br/>
+                 Price is {!v.Quantity*v.Price-(v.Quantity*v.Price*0.10)}
+                
+                <aura:set attribute="else">
+                 Discount is {!v.Quantity*v.Price*0.05}<br/>
+                 Price is {!v.Quantity*v.Price-(v.Quantity*v.Price*0.05)}
+                </aura:set>
+                </aura:if>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>
